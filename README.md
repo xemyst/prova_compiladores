@@ -1,3 +1,4 @@
+# Prova
 Neste projeto será implementada uma DSL(Domain Specific Language). Esta linguagem irá permitir a simulação de bibliotecas e outros tipos de acervos que mantêm livros para empréstimo.
 
 Estes locais são organizados em corredores que possuem um espaço limitado para manter esses livros. Os funcionários dedicados a tarefa de garantir a organização desses espaços são contratados com base no número de livros armazenados e do fluxo de empréstimos.
@@ -6,28 +7,31 @@ Nesta avaliação devera ser entregue um compilador implementado em Python3 usan
 
 O compilador deve validar se a representação de biblioteca ou acervo respeita as regras de número mínimo de funcionários, e de espaço mínimo para armazenamento.
 
-Arquivo Exemplo:
-´´´json
+## Arquivo Exemplo:
+
+```json
 {
   tipo -> biblioteca ou acervo
   funcionarios -> 10
   corredores -> 3
-  livros -> {
+  livros ->
     artes -> 20
     esportes -> 10
     coputacao -> 31
     ciencias -> 25
   }
 }
-´´´
+
+```
+
 ## Regras de validação:
 
-    Em uma biblioteca para cada 12 livros é necessário um corredor;
-    Em uma biblioteca para cada 2 corredores é necessário um funcionário;
-    Toda biblioteca deve ter um atendente para registrar os empréstimos e as devoluções;
-    Em um acervo cada livro deve ter um número par de cópias sendo no mínimo 4 cópias;
-    Em um acervo para cada 20 livros é necessário um corredor;
-    Em um acervo para cada 4 corredores é necessário um funcionário.
+1. Em uma biblioteca para cada 12 livros é necessário um corredor;
+1. Em uma biblioteca para cada 2 corredores é necessário um funcionário;
+1. Toda biblioteca deve ter um atendente para registrar os empréstimos e as devoluções;
+1. Em um acervo cada livro deve ter um número par de cópias sendo no mínimo 4 cópias;
+1. Em um acervo para cada 20 livros é necessário um corredor;
+1. Em um acervo para cada 4 corredores é necessário um funcionário.
 
 O compilador deverá validar essas regras, e caso alguma não seja respeitada um erro deve ser mostrado e a compilação interrompida (cada regra retorna um erro, uma mesma compilação pode retornar vários erros).
 
