@@ -1,0 +1,8 @@
+{
+  tipo -> biblioteca
+  funcionarios -> 6
+  corredores -> 8
+  livros -> {
+    artes -> 20
+  }
+}

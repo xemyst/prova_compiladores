@@ -1,0 +1,21 @@
+grammar gramatica;
+programa      : ABRE_CHAVE QUEBRA_LINHA* tipo funcionarios corredores livros FECHA_CHAVE ;
+tipo          : TIPO ZETA ESPACO QUEBRA_LINHA;
+funcionarios  : FUNCIONARIOS ZETA NUMERO QUEBRA_LINHA;
+corredores    : CORREDORES ZETA NUMERO QUEBRA_LINHA;
+livros        : LIVROS ZETA ABRE_CHAVE QUEBRA_LINHA* livro+ FECHA_CHAVE QUEBRA_LINHA;
+livro         : TYPE ZETA NUMERO QUEBRA_LINHA;
+
+ZETA             : '->' ;
+FUNCIONARIOS     : 'funcionarios';
+ESPACO           : 'biblioteca' | 'acervo';
+TIPO             :  'tipo' ;
+CORREDORES       : 'corredores' ;
+ABRE_CHAVE       : '{' ;
+FECHA_CHAVE      : '}' ;
+LIVROS           : 'livros';
+RETORNA          : 'retorna' ;
+TYPE             : [a-z]+;
+QUEBRA_LINHA     : [\r\n]+ ;
+NUMERO           : [0-9]+ ;
+SPACE            : (' ' | '\t')+  -> channel(HIDDEN) ;
